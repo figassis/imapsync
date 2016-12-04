@@ -1,3 +1,3 @@
 #!/bin/bash
-#apt-get install libio-socket-ssl-perl
-tools/migrateIMAP.pl -S dragula.websitewelcome.com:993 -D bantumail.com:993 -i users.txt
+#apt-get -y install libio-socket-ssl-perl
+tools/migrateIMAP.pl -S source_ip:993 -D destination_ip:993 -i users.txt
