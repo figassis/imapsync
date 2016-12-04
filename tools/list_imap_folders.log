@@ -1,0 +1,373 @@
+Attempting a non-SSL connection
+1 LOGIN rick@athensfbc.com "pv8251"
+* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+1 OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE NAMESPACE SPECIAL-USE COMPRESS=DEFLATE QUOTA] Logged in
+1 NAMESPACE
+* NAMESPACE (("INBOX." ".")) NIL NIL
+1 OK Namespace completed.
+prefix  >INBOX.<
+delim   >.<
+1 LIST "" "*"
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren) "." INBOX.rick@athensfbc.com.Sent
+* LIST (\HasNoChildren) "." INBOX.rick@athensfbc.com.INBOX
+* LIST (\HasNoChildren \Archive) "." INBOX.Archive
+* LIST (\HasNoChildren \Trash) "." INBOX.Trash
+* LIST (\HasNoChildren \Sent) "." INBOX.Sent
+* LIST (\HasNoChildren \Junk) "." INBOX.Junk
+* LIST (\HasNoChildren \Drafts) "." INBOX.Drafts
+1 OK List completed (0.000 + 0.000 secs).
+large_msg_threshold 
+1 SELECT "INBOX"
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 8 EXISTS
+* 2 RECENT
+* OK [UNSEEN 1] First unseen.
+* OK [UIDVALIDITY 1425308023] UIDs valid
+* OK [UIDNEXT 45] Predicted next UID
+* OK [HIGHESTMODSEQ 48] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+1 FETCH 1:* (RFC822.SIZE body.peek[header.fields (Subject)])
+* 1 FETCH (RFC822.SIZE 5070 BODY[HEADER.FIELDS (SUBJECT)] {48}
+Subject: Undelivered Mail Returned to Sender
+
+)
+* 2 FETCH (RFC822.SIZE 19077 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 3 FETCH (RFC822.SIZE 20301 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 4 FETCH (RFC822.SIZE 1527 BODY[HEADER.FIELDS (SUBJECT)] {26}
+Subject: first message
+
+)
+* 5 FETCH (RFC822.SIZE 1897 BODY[HEADER.FIELDS (SUBJECT)] {28}
+Subject: two attachments
+
+)
+* 6 FETCH (RFC822.SIZE 1803 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 7 FETCH (RFC822.SIZE 2010 BODY[HEADER.FIELDS (SUBJECT)] {38}
+Subject: Project meeting on Friday
+
+)
+* 8 FETCH (RFC822.SIZE 4769 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+1 OK Fetch completed (0.018 + 0.000 secs).
+msg size 5070
+msg size 19077
+msg size 20301
+msg size 1527
+msg size 1897
+msg size 1803
+msg size 2010
+msg size 4769
+large_msg_threshold 
+1 SELECT "INBOX.Archive"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 0 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1425308028] UIDs valid
+* OK [UIDNEXT 1] Predicted next UID
+* OK [HIGHESTMODSEQ 1] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+large_msg_threshold 
+1 SELECT "INBOX.Drafts"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 0 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1425308024] UIDs valid
+* OK [UIDNEXT 2] Predicted next UID
+* OK [HIGHESTMODSEQ 3] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+large_msg_threshold 
+1 SELECT "INBOX.Junk"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 0 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1425308026] UIDs valid
+* OK [UIDNEXT 1] Predicted next UID
+* OK [HIGHESTMODSEQ 1] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+large_msg_threshold 
+1 SELECT "INBOX.Sent"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 9 EXISTS
+* 8 RECENT
+* OK [UNSEEN 2] First unseen.
+* OK [UIDVALIDITY 1425308025] UIDs valid
+* OK [UIDNEXT 13] Predicted next UID
+* OK [HIGHESTMODSEQ 14] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+1 FETCH 1:* (RFC822.SIZE body.peek[header.fields (Subject)])
+* 1 FETCH (RFC822.SIZE 1253 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 2 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 3 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 4 FETCH (RFC822.SIZE 1255 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 5 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 6 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 7 FETCH (RFC822.SIZE 1255 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 8 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 9 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+1 OK Fetch completed (0.008 + 0.000 secs).
+msg size 1253
+msg size 939
+msg size 980
+msg size 1255
+msg size 939
+msg size 980
+msg size 1255
+msg size 939
+msg size 980
+large_msg_threshold 
+1 SELECT "INBOX.Trash"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 0 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1425308027] UIDs valid
+* OK [UIDNEXT 2] Predicted next UID
+* OK [HIGHESTMODSEQ 1] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+large_msg_threshold 
+1 SELECT "INBOX.rick@athensfbc.com.INBOX"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 24 EXISTS
+* 24 RECENT
+* OK [UNSEEN 1] First unseen.
+* OK [UIDVALIDITY 1425308029] UIDs valid
+* OK [UIDNEXT 25] Predicted next UID
+* OK [HIGHESTMODSEQ 1] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+1 FETCH 1:* (RFC822.SIZE body.peek[header.fields (Subject)])
+* 1 FETCH (RFC822.SIZE 2010 BODY[HEADER.FIELDS (SUBJECT)] {38}
+Subject: Project meeting on Friday
+
+)
+* 2 FETCH (RFC822.SIZE 4769 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 3 FETCH (RFC822.SIZE 5070 BODY[HEADER.FIELDS (SUBJECT)] {48}
+Subject: Undelivered Mail Returned to Sender
+
+)
+* 4 FETCH (RFC822.SIZE 19077 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 5 FETCH (RFC822.SIZE 20301 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 6 FETCH (RFC822.SIZE 1527 BODY[HEADER.FIELDS (SUBJECT)] {26}
+Subject: first message
+
+)
+* 7 FETCH (RFC822.SIZE 1897 BODY[HEADER.FIELDS (SUBJECT)] {28}
+Subject: two attachments
+
+)
+* 8 FETCH (RFC822.SIZE 1803 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 9 FETCH (RFC822.SIZE 2010 BODY[HEADER.FIELDS (SUBJECT)] {38}
+Subject: Project meeting on Friday
+
+)
+* 10 FETCH (RFC822.SIZE 4769 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 11 FETCH (RFC822.SIZE 5070 BODY[HEADER.FIELDS (SUBJECT)] {48}
+Subject: Undelivered Mail Returned to Sender
+
+)
+* 12 FETCH (RFC822.SIZE 19077 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 13 FETCH (RFC822.SIZE 20301 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 14 FETCH (RFC822.SIZE 1527 BODY[HEADER.FIELDS (SUBJECT)] {26}
+Subject: first message
+
+)
+* 15 FETCH (RFC822.SIZE 1897 BODY[HEADER.FIELDS (SUBJECT)] {28}
+Subject: two attachments
+
+)
+* 16 FETCH (RFC822.SIZE 1803 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 17 FETCH (RFC822.SIZE 2010 BODY[HEADER.FIELDS (SUBJECT)] {38}
+Subject: Project meeting on Friday
+
+)
+* 18 FETCH (RFC822.SIZE 4769 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 19 FETCH (RFC822.SIZE 5070 BODY[HEADER.FIELDS (SUBJECT)] {48}
+Subject: Undelivered Mail Returned to Sender
+
+)
+* 20 FETCH (RFC822.SIZE 19077 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 21 FETCH (RFC822.SIZE 20301 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+* 22 FETCH (RFC822.SIZE 1527 BODY[HEADER.FIELDS (SUBJECT)] {26}
+Subject: first message
+
+)
+* 23 FETCH (RFC822.SIZE 1897 BODY[HEADER.FIELDS (SUBJECT)] {28}
+Subject: two attachments
+
+)
+* 24 FETCH (RFC822.SIZE 1803 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: Re: email archiving tool
+
+)
+1 OK Fetch completed (0.069 + 0.000 secs).
+msg size 2010
+msg size 4769
+msg size 5070
+msg size 19077
+msg size 20301
+msg size 1527
+msg size 1897
+msg size 1803
+msg size 2010
+msg size 4769
+msg size 5070
+msg size 19077
+msg size 20301
+msg size 1527
+msg size 1897
+msg size 1803
+msg size 2010
+msg size 4769
+msg size 5070
+msg size 19077
+msg size 20301
+msg size 1527
+msg size 1897
+msg size 1803
+large_msg_threshold 
+1 SELECT "INBOX.rick@athensfbc.com.Sent"
+* OK [CLOSED] Previous mailbox closed.
+* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+* OK [PERMANENTFLAGS (\Answered \Flagged \Deleted \Seen \Draft \*)] Flags permitted.
+* 9 EXISTS
+* 9 RECENT
+* OK [UNSEEN 1] First unseen.
+* OK [UIDVALIDITY 1425308030] UIDs valid
+* OK [UIDNEXT 10] Predicted next UID
+* OK [HIGHESTMODSEQ 1] Highest
+1 OK [READ-WRITE] Select completed (0.000 + 0.000 secs).
+1 FETCH 1:* (RFC822.SIZE body.peek[header.fields (Subject)])
+* 1 FETCH (RFC822.SIZE 1255 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 2 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 3 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 4 FETCH (RFC822.SIZE 1255 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 5 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 6 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 7 FETCH (RFC822.SIZE 1255 BODY[HEADER.FIELDS (SUBJECT)] {37}
+Subject: RE: email archiving tool
+
+)
+* 8 FETCH (RFC822.SIZE 939 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+* 9 FETCH (RFC822.SIZE 980 BODY[HEADER.FIELDS (SUBJECT)] {36}
+Subject: RE: IMAP Tools purchase
+
+)
+1 OK Fetch completed (0.023 + 0.000 secs).
+msg size 1255
+msg size 939
+msg size 980
+msg size 1255
+msg size 939
+msg size 980
+msg size 1255
+msg size 939
+msg size 980
+1 LOGOUT
+* BYE Logging out
+1 OK Logout completed.
+Writing the list of large messages to large_msg_report.list
+There are 0 lines in the list of large messages
