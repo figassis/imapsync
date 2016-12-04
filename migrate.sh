@@ -5,7 +5,7 @@ if [ $# -ne 3 ]; then
 fi
 
 source=$1
-destination=$1
+destination=$2
 users=$3
 
 #apt-get -y install libio-socket-ssl-perl
